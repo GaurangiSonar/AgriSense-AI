@@ -94,6 +94,34 @@ PDF Report
 
 # System Architecture
 
+```mermaid
+flowchart TD
+
+A[👨‍🌾 User] --> B[🖥️ Streamlit Web Interface]
+
+B --> C[📤 Image Upload]
+
+C --> D[👁️ Vision Agent<br/>OpenRouter + Qwen Vision]
+
+D --> E[🛡️ Critic Agent]
+
+E --> F[📚 RAG Agent]
+
+F --> G[(FAISS Knowledge Base)]
+
+F --> H[💊 Treatment Agent]
+
+H --> I[💰 Economic Agent]
+
+I --> J[🧠 Planner Agent]
+
+J --> K[📝 Synthesizer Agent]
+
+K --> L[(SQLite Database)]
+
+K --> M[📄 Dashboard & PDF Report]
+```
+
 - Vision AI detects crop disease
 - Critic Agent validates diagnosis
 - RAG Agent retrieves verified agricultural evidence
@@ -186,17 +214,7 @@ streamlit run app.py
 - Professional PDF report generation
 - Multi-agent AI powered agricultural assistance
 
----
 
-# Developed For
-
-Lenovo LEAP Internship
-
-Powered by
-
-- Lenovo
-- BharatCares
-- AICTE
 
 ---
 
@@ -206,6 +224,3 @@ Powered by
 
 ---
 
-## License
-
-This project is developed for educational and internship purposes.

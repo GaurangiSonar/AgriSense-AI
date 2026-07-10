@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: agrisense-ai
+    env: python
+    plan: standard
+    buildCommand: pip install -r requirements.txt && python scripts/init_db.py
+    startCommand: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+

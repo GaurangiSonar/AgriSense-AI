@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+.env
+data/agrisense.db
+data/faiss_index
+logs/
+work/*.jpg
+work/*.jpeg
+work/*.png
+

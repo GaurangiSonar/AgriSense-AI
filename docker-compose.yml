@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  agrisense:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      DB_PATH: /app/data/agrisense.db
+      FAISS_INDEX_PATH: /app/data/faiss_index
+    volumes:
+      - ./data:/app/data
+    stdin_open: true
+    tty: true
+
